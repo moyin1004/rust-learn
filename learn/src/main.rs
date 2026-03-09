@@ -5,8 +5,12 @@ enum IpAddr {
 
 fn emum_learn() {
     let home = IpAddr::V4(String::from("127.0.0.1"));
-    // let loopback = IpAddr::V6(String::from("::1"));
+    let loopback = IpAddr::V6(String::from("::1"));
     match home {
+        IpAddr::V4(ip) => println!("home ip: {ip}"),
+        IpAddr::V6(ip) => println!("loopback ip: {ip}"),
+    }
+    match loopback {
         IpAddr::V4(ip) => println!("home ip: {ip}"),
         IpAddr::V6(ip) => println!("loopback ip: {ip}"),
     }
@@ -43,8 +47,8 @@ impl UsState {
 
 enum Coin {
     Penny,
-    Nickel,
-    Dime,
+    // Nickel,
+    // Dime,
     Quarter(UsState),
 }
 
