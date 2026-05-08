@@ -5,6 +5,7 @@ use std::time::Duration;
 pub mod async_learn;
 
 fn mutex() {
+    // 不幸的是，Rc<T> 并不能安全的在线程间共享
     let counter = Arc::new(Mutex::new(0));
     let mut handles = vec![];
 
@@ -25,7 +26,7 @@ fn mutex() {
     println!("Result: {}", *counter.lock().unwrap());
 }
 
-fn main() {
+fn mutex_test() {
     println!("Hello, world!");
     let handle = thread::spawn(|| {
         for i in 1..10 {
@@ -49,5 +50,12 @@ fn main() {
     println!("Got: {received}");
 
     mutex();
-    async_learn::spawn();
+}
+
+fn main() {
+    // async_learn::spawn();
+
+    // async_learn::future();
+
+    async_learn::yield_learn();
 }

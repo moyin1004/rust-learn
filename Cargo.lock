@@ -305,6 +305,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "hello_macro_derive"
+version = "0.1.0"
+dependencies = [
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "html5ever"
 version = "0.27.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -592,6 +600,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c41e0c4fef86961ac6d6f8a82609f55f31b05e4fce149ac5710e439df7619ba4"
 
 [[package]]
+name = "macro_learn"
+version = "0.1.0"
+dependencies = [
+ "hello_macro_derive",
+]
+
+[[package]]
 name = "markup5ever"
 version = "0.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -633,6 +648,10 @@ name = "once_cell"
 version = "1.21.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50"
+
+[[package]]
+name = "oop"
+version = "0.1.0"
 
 [[package]]
 name = "parking_lot"
@@ -1421,6 +1440,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "trait_learn"
+version = "0.1.0"
+
+[[package]]
 name = "trpl"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1569,6 +1592,10 @@ checksum = "75a326b8c223ee17883a4251907455a2431acc2791c98c26279376490c378c16"
 dependencies = [
  "unicode-ident",
 ]
+
+[[package]]
+name = "web"
+version = "0.1.0"
 
 [[package]]
 name = "web-sys"
